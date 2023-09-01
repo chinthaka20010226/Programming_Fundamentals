@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void arr(int r,int c);
+
+int main() {
+    int n,m;
+    printf("Input the number of rows & colomns:\n");
+    scanf("%d%d", &n,&m);
+
+    arr(n,m);
+
+    return 0;
+}
+
+void arr(int r,int c) {
+    int arr[r][c];
+    printf("Input the number of elements in %d*%d Metrix:\n", r,c);
+    for(int i = 0;i < r;i++) {
+        for(int j = 0;j < c;j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+    for(int i = 0;i < r;i++) {
+        for(int j = 0;j < c;j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i = 0;i < r;i++) {
+        int sum = 0;
+        for(int j = 0;j < c;j++) {
+            sum = sum + arr[i][j];
+        }
+        printf("summation of %d row: %d\n", (i+1),sum);
+    }
+}

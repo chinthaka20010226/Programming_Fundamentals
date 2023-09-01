@@ -1,0 +1,71 @@
+#include <stdio.h>
+
+void Input_elm(int arr[][3],int row,int col);
+void print_elm(int arr[][3],int row,int col);
+void mul_arr(int arr1[][3],int arr2[][3],int arr3[][3],int r1,int c2,int c1);
+
+int main() {
+    int m,n,a,b;
+
+    printf("Input m * n of arr_01 matrix:\n");
+    scanf("%d%d", &m,&n);
+    int arr_01[m][n];
+    printf("Input the elements of arr_01:\n");
+    Input_elm(arr_01,m,n);
+
+    printf("Input a * b of arr_02 matrix:\n");
+    scanf("%d%d", &a,&b);
+    int arr_02[a][b];
+    printf("Input the elements of arr_02:\n");
+    Input_elm(arr_02,a,b);
+
+    printf("arr_01 is:\n");
+    print_elm(arr_01,m,n);
+
+    printf("arr_02 is:\n");
+    print_elm(arr_02,a,b);
+
+    int arr_03[m][b];
+
+    if(n == a) {
+        printf("multiplication of arr_01 & arr_02:\n");
+        mul_arr(arr_01,arr_02,arr_03,m,b,n);
+    }
+    else {
+        printf("Not output.");
+    }
+
+}
+
+void Input_elm(int arr[][3],int row,int col) {
+    for(int i = 0;i < row;i++) {
+        for(int j = 0;j < col;j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+}
+
+void print_elm(int arr[][3],int row,int col) {
+    for(int i = 0;i < row;i++) {
+        for(int j = 0;j < col;j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+
+void mul_arr(int arr1[][3],int arr2[][3],int arr3[][3],int r1,int c2,int c1) {
+    for(int i = 0;i < r1;i++) {
+        for(int j = 0;j < c2;j++) {
+            int sum = 0;
+            for(int k = 0;k < c1;k++) {
+                sum = sum + arr1[i][k] * arr2[k][j];
+            }
+            arr3[i][j] = sum;
+            printf("%d ", arr3[i][j]);
+        }
+        printf("\n");
+    }
+}

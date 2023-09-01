@@ -1,0 +1,29 @@
+#include <stdio.h>
+void arr_min(int x);
+int main() {
+    int n;
+    printf("Input n number of elements in an array : \n");
+    scanf("%d", &n);
+    arr_min(n);
+    
+    return 0;
+}
+void arr_min(int x) {
+    int arr[x],min;
+    printf("Enter the n elements : \n");
+    for(int i = 0;i < x;i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("\n");
+    for(int j = 0;j < x;j++) {
+        printf("%d ", arr[j]);
+    }
+    printf("\n");
+    min = arr[x - 1];
+    for(int l = x - 1;l >= 0;l--) {
+        if(arr[l] < min) {
+           min = arr[l];
+        }
+    }
+    printf("minimum number is : %d", min);
+}

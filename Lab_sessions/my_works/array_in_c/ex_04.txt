@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    float salary[10];
+    int count;
+    printf("Input the salary of 10 employees : \n");
+    for(int i = 0;i < 10;i++) {
+        scanf("%f", &salary[i]);
+    }
+    printf("\n");
+    for(int l = 0;l < 10;l++) {
+        if((salary[l] >= 50000.00) && (salary[l] <= 75000.00)) {
+            count++;
+        }
+    }
+    printf("number of employees getting salary in between 50,000 – 75,000 : %d", count);
+    return 0;
+}

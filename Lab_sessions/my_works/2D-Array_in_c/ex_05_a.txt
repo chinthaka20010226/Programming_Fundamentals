@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    int arr1[2][2],arr2[2][2],arr3[2][2];
+
+    printf("Input number of elements in 2*2 Metrix 01:\n");
+    for(int i = 0;i < 2;i++) {
+        for(int j = 0;j < 2;j++) {
+            scanf("%d", &arr1[i][j]);
+        }
+    }
+    printf("Input number of elements in 2*2 Metrix 02:\n");
+    for(int i = 0;i < 2;i++) {
+        for(int j = 0;j < 2;j++) {
+            scanf("%d", &arr2[i][j]);
+        }
+    }
+    printf("Addition of Metrix 01 & Metrix 02:\n");
+    for(int i = 0;i < 2;i++) {
+        for(int j = 0;j < 2;j++) {
+            arr3[i][j] = arr1[i][j] + arr2[i][j];
+            printf("%d ", arr3[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+
+}

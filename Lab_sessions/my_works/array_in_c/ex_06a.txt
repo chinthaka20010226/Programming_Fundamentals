@@ -1,0 +1,28 @@
+#include <stdio.h>
+void desc_order(int arr[],int size);
+int main() {
+    int n;
+    printf("Input n number of elements in an array : \n");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter n number of elements : \n");
+    for(int i = 0;i < n;i++) {
+        scanf("%d", &arr[i]);
+    }
+    desc_order(arr,n);
+    
+    return 0;
+}
+void desc_order(int arr[],int size) {
+    int temp;
+    for(int j = 0;j < n;j++) {
+        for(int l = j;l < n;l++) {
+            if(arr[l] > arr[j]) {
+               temp = arr[j];
+               arr[j] = arr[l];
+               arr[l] = temp;
+            }
+        }
+    printf("%d ", arr[j]);
+    }
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+void avg(int arr[],int size);
+int main() {
+    int n;
+    printf("Input n number of elements in array : \n");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the n number of elements : \n");
+    for(int i = 0;i < n;i++) {
+        scanf("%d", &arr[i]);
+    }
+    avg(arr,n);
+
+    return 0;
+}
+void avg(int arr[],int size) {
+    float sum = 0,avg = 0;
+    for(int j = 0;j < size;j++) {
+        sum = sum + arr[j];
+    }
+    avg = sum / size;
+    printf("average of array elements is : %f", avg);
+}

@@ -1,0 +1,35 @@
+#include <stdio.h>
+int main() {
+    int Met_01[3][3] = {2,2,3,3,2,4,1,3,4};
+    int Met_02[3][3] = {3,5,7,4,2,1,3,2,1};
+    int Met_00[3][3];
+
+    printf("Metrix 01:\n");
+    for(int i = 0;i < 3;i++) {
+        for(int j = 0;j < 3;j++) {
+            printf("%d ", Met_01[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("Metrix 02:\n");
+    for(int i = 0;i < 3;i++) {
+        for(int j = 0;j < 3;j++) {
+            printf("%d ", Met_02[i][j]);
+        }
+        printf("\n");
+    }
+    printf("Multiplication of Metrix 01 & Metrix 02:\n");
+    for(int i = 0;i < 3;i++) {
+        for(int j = 0;j < 3;j++) {
+            int sum = 0;
+            for(int k = 0;k < 3;k++) {
+                sum = sum + Met_01[i][k] * Met_02[k][j];                
+            }
+            Met_00[i][j] = sum;
+            printf("%d ", Met_00[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}

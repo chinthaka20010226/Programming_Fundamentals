@@ -1,0 +1,81 @@
+//Strings in C.
+
+#include<stdio.h>
+int main(){
+    char name[] = "Morning";
+    char *ptr;
+
+    ptr = name; //strore the address of the string
+    while(*ptr != '\0'){
+         printf("%c   %u\n", *ptr,ptr);
+         ptr++;
+    }
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    char name[25];
+    printf("Enter your name:");
+    scanf("%s", name);
+    printf("Hello %s!\n", name);
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+    char namee[25];
+    printf("Enter your full name:");
+    gets(name);
+    puts("Hello!");
+    puts(name);
+    return 0;
+}
+
+//standard of strings;
+//01)strlen()
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char arr[] = "Programming Fundamentals";
+    int len1,len2;
+    len1 = strlen(arr);
+    len2 = strlen("University of Moratuwa");
+    print
+}
+
+//02)strcpy()
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char source[] = "Morning";
+    char target[20];
+    strcpy(target,source);
+    printf("");
+}
+
+//03)strcat()
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char source[] = "Morning!";
+    char target[30] = "Good";
+    strca(target,source);
+    
+}
+
+//04)strcmp()
+
+#include<stdio.h>
+#include<string.h>
+
+
+//Recursion in C.
+
+
+
+
+

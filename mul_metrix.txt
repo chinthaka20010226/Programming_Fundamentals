@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main() {
+    int m1r = 0,m1c = 0,m2r = 0,m2c = 0;
+    printf("Enter rows of the 1st Metrix :");
+    scanf("%d", &m1r);
+    printf("Enter column of the 1st Metrix :");
+    scanf("%d", &m1c);
+    printf("Enter rows of the 2nd Metrix :");
+    scanf("%d", &m2r);
+    printf("Enter column of the 2nd Metrix :");
+    scanf("%d", &m2c);
+
+    int m1[m1r][m1c];
+    int m2[m2r][m2c];
+
+    if(m1c != m2r) {
+        printf("The metrices cann't multiply.\n");
+        return 0;
+    }
+    int ans[m1r][m2c];
+
+    for(int i = 0;i < m1r;i++) {
+        for(int j = 0;j < m1c;j++) {
+            printf("Enter metrix 01 [%d][%d] value :", i,j);
+            scanf("%d", &m1[i][j]);
+        }
+    }
+
+    for(int i = 0;i < m2r;i++) {
+        for(int j = 0;j < m2c;j++) {
+            printf("Enter metrix 02 [%d][%d] value :", i,j);
+            scanf("%d", &m2[i][j]);
+        }
+    }
+
+    for(int i = 0;i < m1r;i++) {
+        for(int j = 0;j < m2c;j++) {
+            int sum = 0;
+            for(int k = 0;k < m1c;k++) {
+                sum = sum + m1[i][k] * m2[k][j];
+            }
+            ans[i][j] = sum;
+        }
+    }
+
+    for(int i = 0;i < m1r;i++) {
+        for(int j = 0;j < m2c;j++) {
+            printf("%d ", ans[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+
+}
